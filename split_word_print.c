@@ -30,6 +30,10 @@ int len_of_next(char *Str, char **word)
 	while (*p == ' ') ++p;
 	*word = p;
 
+	if (p == NULL) {
+		return 0;
+	}
+
 	for (; *p != ' ' && *p != '\0'; ++p);
 
 	return p - *word;
@@ -44,7 +48,7 @@ void print_words(char *Str, int N)
 	int len = 0;
 	int word_len = len_of_next(p, &word);
 
-	while (word != NULL && word_len > 0) 
+	while (word_len > 0) 
 	{
 		// 换行的两种情况: 
 		// 1.当单词长度 < N 并且比剩余长度长时
