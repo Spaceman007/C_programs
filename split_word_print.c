@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <string.h>
 
-// 大印Str的前n个单词
+// 打印Str的前n个字符
 void print_n_chars(char *Str, int n)
 {
 	int i = 0;
